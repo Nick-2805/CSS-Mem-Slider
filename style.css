@@ -27,7 +27,7 @@ body {
 	margin: 0 auto;
 	width: 50vw;
 	display: grid;
-	height: 65vh;
+	height: 75vh;
 	overflow: hidden;
 	align-content: center;
 }
@@ -37,7 +37,7 @@ body {
 	height: 60vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	row-gap: 2vh;
 }
 
@@ -74,7 +74,6 @@ input[name="r"] {
 }
 
 .navigation {
-	margin-top: 3em;
 	width: 50vw;
 	display: flex;
 	justify-content: center;
@@ -110,11 +109,13 @@ input[name="r"] {
 }
 
 .block__text {
-	height: 5vh;
+	height: fit-content;
 	display: flex;
 	font-family: cursive;
 	font-weight: 700;
 	text-align: center;
+	align-items: center;
+	line-height: 1.5em;
 }
 
 .block {
@@ -177,8 +178,17 @@ input[name="r"] {
 	margin-left: -200vw;
 }
 
+@media (max-width: 768px) {
+	.slider {
+		height: calc(60vh - 5vh);
+	}
+}
+
 @media (max-width: 567px) {
 	.control {
 		width: 2em;
+	}
+	.block p {
+		font-size: 1em;
 	}
 }
