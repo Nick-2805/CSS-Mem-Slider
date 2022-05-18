@@ -34,7 +34,7 @@ body {
 	margin: 1em auto;
 	width: 50vw;
 	display: grid;
-	height: calc(40em - 1em);
+	height: calc(55vh - 1vh);
 	overflow: hidden;
 	align-content: center;
 }
@@ -56,11 +56,9 @@ body {
 .slide {
 	display: flex;
 	width: 50vw;
-	/* height: 50vh; */
 	flex-direction: column;
 	align-items: center;
 	border-radius: 2em;
-	/* border: 0.3em solid yellow; */
 	overflow: hidden;
 	transition: 1s;
 }
@@ -68,8 +66,7 @@ body {
 .img {
 	display: block;
 	margin: 0 auto;
-	/* width: 45vw; */
-	max-height: 50vh;
+	max-height: calc(50vh - 5vh);
 	-o-object-fit: contain;
 	object-fit: contain;
 	border-radius: 2em;
@@ -98,9 +95,11 @@ input[name="r"] {
 .bar:hover {
 	opacity: 1;
 	transform: scale(1.1);
+	background-color: rgb(182 100 100 / 70%);
 	border-radius: 2em;
 	box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
+
 
 .control {
 	width: 3em;
@@ -111,6 +110,7 @@ input[name="r"] {
 	border-radius: 0.7em;
 	transition: all 0.4s ease;
 }
+
 
 .block__text {
 	height: -webkit-fit-content;
@@ -183,6 +183,22 @@ input[name="r"] {
 	margin-left: -200vw;
 }
 
+#r1:checked~.navigation .c1 .control {
+	background-color: red;
+}
+
+#r2:checked~.navigation .c2 .control {
+	background-color: red;
+}
+
+#r3:checked~.navigation .c3 .control {
+	background-color: red;
+}
+
+#r4:checked~.navigation .c4 .control {
+	background-color: red;
+}
+
 footer {
 	width: 100vw;
 	height: 8vh;
@@ -206,9 +222,9 @@ footer {
 
 
 @media (max-width: 768px) {
-	.slider {
+	/* .slider { */
 		/* height: calc(60vh - 5vh); */
-	}
+	/* } */
 }
 
 @media (max-width: 567px) {
